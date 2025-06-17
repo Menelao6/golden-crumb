@@ -1,0 +1,215 @@
+.productGrid {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px var(--card-shadow);
+}
+
+.gridHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.gridTitle {
+  font-size: 1.8rem;
+  color: var(--headings-color);
+}
+
+.sortOptions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sortSelect {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.productsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.productCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+}
+
+.cardImage {
+  height: 200px;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.productCard:hover .cardImage img {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.productName {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--headings-color);
+}
+
+.productDescription {
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+  min-height: 60px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productPrice {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--button-hover);
+}
+
+.addButton {
+  background: var(--button-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.addButton:hover {
+  background: var(--button-hover);
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(217, 160, 102, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--button-color);
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.emptyContainer {
+  text-align: center;
+  padding: 4rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+}
+
+.dietaryTags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.tagVegan,
+.tagGlutenFree,
+.tagSugarFree {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.tagVegan {
+  background: rgba(76, 175, 80, 0.1);
+  color: #2e7d32;
+}
+
+.tagGlutenFree {
+  background: rgba(33, 150, 243, 0.1);
+  color: #1565c0;
+}
+
+.tagSugarFree {
+  background: rgba(233, 30, 99, 0.1);
+  color: #c2185b;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantityButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--button-color);
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantityButton:hover {
+  background: var(--button-hover);
+}
+
+.quantityDisplay {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.addButtonActive {
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .gridHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .productsContainer {
+    gap: 1.5rem;
+  }
+}

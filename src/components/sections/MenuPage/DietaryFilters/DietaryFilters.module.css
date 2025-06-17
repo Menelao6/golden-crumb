@@ -1,0 +1,83 @@
+.dietaryFilters {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px var(--card-shadow);
+}
+
+.filterTitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--headings-color);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.filterTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--button-color);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.filterLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+}
+
+.filterLabel input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.filterLabel:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.filterLabel input:checked ~ .checkmark {
+  background-color: var(--button-color);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.filterLabel input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.filterLabel .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}

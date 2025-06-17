@@ -26,6 +26,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   max-width: 100vw;
@@ -67,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 .section {
   padding: var(--section-padding);
   padding-bottom: 4rem;
+   scroll-margin-top: 100px;
 }
 
 section:first-of-type {
@@ -103,6 +108,10 @@ section:first-of-type {
   background: var(--button-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.button, .addButton, .highlightButton {
+  transition: all 0.3s ease;
 }
 
 /* Responsive */

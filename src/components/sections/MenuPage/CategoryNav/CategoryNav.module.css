@@ -1,0 +1,56 @@
+.categoryNav {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  margin-bottom: 2rem;
+}
+
+.categoryTitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--headings-color);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.categoryTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--button-color);
+}
+
+.categoryList {
+  list-style: none;
+}
+
+.categoryList li {
+  margin-bottom: 0.5rem;
+}
+
+.categoryButton {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: var(--foreground);
+}
+
+.categoryButton:hover {
+  background: rgba(217, 160, 102, 0.1);
+}
+
+.categoryButton.active {
+  background: var(--button-color);
+  color: white;
+  font-weight: 500;
+}
