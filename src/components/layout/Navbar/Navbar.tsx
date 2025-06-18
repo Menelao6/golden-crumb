@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { FiShoppingCart, FiUser, FiX, FiMenu } from 'react-icons/fi'
 import CartPreview from '../CartPreview/CartPreview'
 import Styles from './Navbar.module.css'
+import { useCart } from '../../../context/CartContext'
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false)
@@ -15,6 +16,8 @@ export default function Navbar() {
 
   const toggleNav = () => setIsNavOpen(!isNavOpen)
   const toggleCart = () => setIsCartOpen(!isCartOpen)
+
+  const { state: cartState } = useCart()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +70,9 @@ export default function Navbar() {
           </Link>
           <button className={Styles.cartButton} onClick={toggleCart}>
             <FiShoppingCart className={Styles.cartIcon} />
-            {cartItems > 0 && <span className={Styles.cartBadge}>{cartItems}</span>}
+            {cartState.totalItems > 0 && (
+              <span className={Styles.cartBadge}>{cartState.totalItems}</span>
+            )}
           </button>
         </div>
 
@@ -78,7 +83,9 @@ export default function Navbar() {
           </Link>
           <button className={Styles.cartButton} onClick={toggleCart}>
             <FiShoppingCart className={Styles.cartIcon} />
-            {cartItems > 0 && <span className={Styles.cartBadge}>{cartItems}</span>}
+           { cartState.totalItems > 0 && (
+              <span className={Styles.cartBadge}>{cartState.totalItems}</span>
+            )}
           </button>
           <button
             className={`${Styles.menuButton} ${isNavOpen ? Styles.active : ''}`}

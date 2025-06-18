@@ -1,6 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
+import { CartProvider } from "../context/CartContext";
 
 const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
@@ -27,7 +28,9 @@ export const metadata: Metadata = {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={inter.className}>
-        {children}
+        <CartProvider>
+          {children}
+        </CartProvider>
       </body>
     </html>
   );

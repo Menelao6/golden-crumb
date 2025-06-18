@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import Image from 'next/image'
 import Styles from './ProductGrid.module.css'
 import { Product, DietaryFilters } from '../../../../types/index'
+import { useCart } from '../../../../context/CartContext'
 
 interface ProductGridProps {
   activeCategory: string
@@ -22,6 +23,7 @@ export default function ProductGrid({
 }: ProductGridProps) {
   const [products, setProducts] = useState<Product[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const {state: cartState } = useCart()
   
   // Fetch products from API (simulated)
   useEffect(() => {
@@ -37,7 +39,7 @@ export default function ProductGrid({
             name: "Butter Croissant",
             description: "Classic French croissant with layers of buttery goodness",
             price: 3.99,
-            image: "/assets/croissant.jpg",
+            image: "/assets/Croisant.jpg",
             category: "pastries",
             dietary: []
           },
@@ -154,9 +156,9 @@ export default function ProductGrid({
   }, [products, activeCategory, dietaryFilters, sortOption])
 
   // Get quantity in cart for a product
-  const getQuantityInCart = (productId: number) => {
+  const getQuantityInCart = (productId: number): number => {
     const item = cartItems.find(item => item.id === productId)
-    return item ? item.quantity : 0
+    return typeof item?.quantity === 'number' ? item.quantity : 0
   }
 
   if (isLoading) {
@@ -202,7 +204,7 @@ export default function ProductGrid({
       
       <div className={Styles.productsContainer}>
         {filteredProducts.map(product => {
-          const inCartQuantity = getQuantityInCart(product.id)
+          const inCartQuantity = cartState.items.find(item => item.id === product.id)?.quantity || 0
           return (
             <div key={product.id} className={Styles.productCard}>
               <div className={Styles.cardImage}>

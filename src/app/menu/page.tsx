@@ -1,4 +1,7 @@
 "use client";
+import Navbar from "../../components/layout/Navbar/Navbar";
+import Footer from "../../components/layout/Footer/Footer";
+import { useCart } from '../../context/CartContext';
 import MenuHero from "../../components/sections/MenuPage/MenuHero/MenuHero";
 import CategoryNav from "../../components/sections/MenuPage/CategoryNav/CategoryNav";
 import DietaryFilters from "../../components/sections/MenuPage/DietaryFilters/DietaryFilters";
@@ -17,23 +20,15 @@ export default function MenuPage() {
   })
   const [sortOption, setSortOption] = useState('popular')
   const [cartItems, setCartItems] = useState<Product[]>([])
+  const { dispatch } = useCart()
 
   const handleAddToCart = (product: Product) => {
-    setCartItems(prev => {
-      const existingItem = prev.find(item => item.id === product.id)
-      if (existingItem) {
-        return prev.map(item => 
-          item.id === product.id 
-            ? { ...item, quantity: (item.quantity || 1) + 1 } 
-            : item
-        )
-      }
-      return [...prev, { ...product, quantity: 1 }]
-    })
+    dispatch({ type: 'ADD_ITEM', item: product })
   }
 
   return (
     <div>
+      <Navbar />
       <MenuHero />
       <div className="container py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -57,9 +52,11 @@ export default function MenuPage() {
               onAddToCart={handleAddToCart}
               cartItems={cartItems}
             />
+
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
