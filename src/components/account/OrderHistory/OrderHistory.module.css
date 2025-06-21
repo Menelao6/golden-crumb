@@ -1,0 +1,123 @@
+.ordersContainer {
+  border: 1px solid var(--section-bg-2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ordersHeader {
+  display: none;
+  background: var(--card-bg);
+  padding: 1rem;
+  font-weight: 600;
+  color: var(--headings-color);
+  border-bottom: 1px solid var(--section-bg-2);
+}
+
+@media (min-width: 768px) {
+  .ordersHeader {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr auto;
+  }
+}
+
+.ordersList {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderItem {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--section-bg-2);
+}
+
+.orderItem:last-child {
+  border-bottom: none;
+}
+
+.orderId {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.orderDate, 
+.orderStatus, 
+.orderTotal {
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.orderItems {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--section-bg-2);
+  font-size: 0.9rem;
+  color: var(--foreground);
+}
+
+.orderItemName {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.orderActions {
+  margin-top: 1rem;
+}
+
+.viewButton {
+  display: inline-block;
+  background: var(--button-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.viewButton:hover {
+  background: var(--button-hover);
+}
+
+@media (min-width: 768px) {
+  .orderItem {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr auto;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .orderId, 
+  .orderDate, 
+  .orderStatus, 
+  .orderTotal {
+    margin-bottom: 0;
+  }
+  
+  .orderItems {
+    display: none;
+  }
+}
+
+.emptyOrders {
+  text-align: center;
+  padding: 2rem;
+}
+
+.emptyOrders p {
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+}
+
+.shopButton {
+  display: inline-block;
+  background: var(--button-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.shopButton:hover {
+  background: var(--button-hover);
+}

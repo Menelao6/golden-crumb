@@ -23,6 +23,7 @@ export default function CartPage() {
   }
 
   return (
+
     <div className="container py-12">
       <h1 className={Styles.pageTitle}>Your Shopping Cart</h1>
       
@@ -98,8 +99,8 @@ export default function CartPage() {
                 <span>${state.totalPrice.toFixed(2)}</span>
               </div>
               <div className={Styles.summaryRow}>
-                <span>Tax (8%)</span>
-                <span>${(state.totalPrice * 0.08).toFixed(2)}</span>
+                <span>Tax (20%)</span>
+                <span>${(state.totalPrice * 0.2).toFixed(2)}</span>
               </div>
               <div className={Styles.summaryRow}>
                 <span>Shipping</span>
@@ -119,10 +120,10 @@ export default function CartPage() {
               <div className={Styles.paymentIcons}>
                 <span>We accept:</span>
                 <div className={Styles.icons}>
-                  <img src="/assets/visa.svg" alt="Visa" />
-                  <img src="/assets/mastercard.svg" alt="Mastercard" />
-                  <img src="/assets/amex.svg" alt="American Express" />
-                  <img src="/assets/paypal.svg" alt="PayPal" />
+                  <img src="/assets/social/visa.svg" alt="Visa" />
+                  <img src="/assets/social/mastercard.svg" alt="Mastercard" />
+                  <img src="/assets/social/amex.svg" alt="American Express" />
+                  <img src="/assets/social/paypal.svg" alt="PayPal" />
                 </div>
               </div>
             </div>

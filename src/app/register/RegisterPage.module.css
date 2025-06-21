@@ -1,0 +1,156 @@
+.registerContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+@media (min-width: 992px) {
+  .registerContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.registerForm {
+  padding: 2rem;
+  background: white;
+}
+
+.registerForm h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--headings-color);
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--headings-color);
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.passwordHint {
+  font-size: 0.8rem;
+  color: var(--foreground);
+  margin-top: 0.25rem;
+}
+
+.formActions {
+  margin-top: 2rem;
+}
+
+.registerButton {
+  width: 100%;
+  background: var(--button-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.registerButton:hover {
+  background: var(--button-hover);
+}
+
+.registerButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.registerFooter {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--foreground);
+}
+
+.registerFooter a {
+  color: var(--button-color);
+  font-weight: 500;
+}
+
+.registerFooter a:hover {
+  text-decoration: underline;
+}
+
+.errorMessage {
+  background: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.registerImage {
+  position: relative;
+  background: url('/assets/register-bg.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.benefits {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 2rem;
+  max-width: 400px;
+}
+
+.benefits h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.benefits li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--button-color);
+  font-weight: bold;
+}

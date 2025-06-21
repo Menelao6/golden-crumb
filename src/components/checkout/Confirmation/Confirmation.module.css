@@ -1,0 +1,125 @@
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.confirmationHeader {
+  margin-bottom: 2rem;
+}
+
+.successIcon {
+  font-size: 4rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.confirmationHeader h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--headings-color);
+}
+
+.orderId {
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: rgba(76, 175, 80, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 1rem;
+  color: #2e7d32;
+}
+
+.infoBoxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.infoBox {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.infoIcon {
+  font-size: 2rem;
+  color: var(--button-color);
+  margin-bottom: 1rem;
+}
+
+.infoBox h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--headings-color);
+}
+
+.shippingInfo {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.shippingInfo h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--headings-color);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--section-bg-2);
+}
+
+.shippingInfo p {
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.continueButton,
+.orderButton {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.continueButton {
+  background: var(--button-color);
+  color: white;
+  border: none;
+}
+
+.continueButton:hover {
+  background: var(--button-hover);
+}
+
+.orderButton {
+  background: white;
+  color: var(--button-color);
+  border: 2px solid var(--button-color);
+}
+
+.orderButton:hover {
+  background: rgba(217, 160, 102, 0.1);
+}

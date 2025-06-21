@@ -11,7 +11,6 @@ export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
-  const [cartItems] = useState(0)
   const [isCartOpen, setIsCartOpen] = useState(false)
 
   const toggleNav = () => setIsNavOpen(!isNavOpen)
@@ -112,7 +111,7 @@ export default function Navbar() {
       <CartPreview 
         isOpen={isCartOpen} 
         toggleCart={toggleCart}
-        cartItems={cartItems}
+        cartItems={cartState.items}
       />
     </>
   )

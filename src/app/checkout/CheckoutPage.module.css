@@ -1,0 +1,73 @@
+.checkoutHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  border: 2px solid var(--button-color);
+  color: var(--button-color);
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: var(--foreground);
+  text-align: center;
+}
+
+.step.active span {
+  background: var(--button-color);
+  color: white;
+}
+
+.step.active p {
+  font-weight: 500;
+  color: var(--headings-color);
+}
+
+.divider {
+  flex: 1;
+  height: 2px;
+  background: var(--button-color);
+  margin: 0 -10px;
+}
+
+.checkoutContent {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .checkoutHeader {
+    display: none;
+  }
+  
+  .checkoutContent {
+    padding: 1.5rem;
+  }
+}

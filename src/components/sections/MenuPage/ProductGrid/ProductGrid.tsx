@@ -39,7 +39,7 @@ export default function ProductGrid({
             name: "Butter Croissant",
             description: "Classic French croissant with layers of buttery goodness",
             price: 3.99,
-            image: "/assets/Croisant.jpg",
+            image: "/assets/products/Croissant.jpg",
             category: "pastries",
             dietary: []
           },
@@ -48,7 +48,7 @@ export default function ProductGrid({
             name: "Chocolate Éclair",
             description: "Choux pastry filled with vanilla cream and topped with chocolate",
             price: 4.25,
-            image: "/assets/eclair.jpg",
+            image: "/assets/products/eclair.jpg",
             category: "pastries",
             dietary: []
           },
@@ -57,7 +57,7 @@ export default function ProductGrid({
             name: "Almond Croissant",
             description: "Croissant filled with almond cream and topped with sliced almonds",
             price: 4.50,
-            image: "/assets/almond-croissant.jpg",
+            image: "/assets/products/almond-croissant.jpg",
             category: "pastries",
             dietary: []
           },
@@ -66,7 +66,7 @@ export default function ProductGrid({
             name: "Berry Tart",
             description: "Buttery tart shell filled with pastry cream and fresh berries",
             price: 5.75,
-            image: "/assets/berry-tart.jpg",
+            image: "/assets/products/berry-tart.jpg",
             category: "pastries",
             dietary: []
           },
@@ -75,7 +75,7 @@ export default function ProductGrid({
             name: "Chocolate Chip Cookie",
             description: "Classic cookie loaded with chocolate chips",
             price: 2.50,
-            image: "/assets/chocolate-chip-cookie.jpg",
+            image: "/assets/products/chocolate-chip-cookie.jpg",
             category: "cookies",
             dietary: []
           },
@@ -84,7 +84,7 @@ export default function ProductGrid({
             name: "Baguette",
             description: "Traditional French baguette with crispy crust",
             price: 3.25,
-            image: "/assets/baguette.jpg",
+            image: "/assets/products/baguette.jpg",
             category: "breads",
             dietary: ["vegan"]
           },
@@ -93,7 +93,7 @@ export default function ProductGrid({
             name: "Vegan Brownie",
             description: "Rich chocolate brownie made without animal products",
             price: 3.75,
-            image: "/assets/vegan-brownie.jpg",
+            image: "/assets/products/vegan-brownie.jpg",
             category: "cookies",
             dietary: ["vegan"]
           },
@@ -102,7 +102,7 @@ export default function ProductGrid({
             name: "Gluten-Free Muffin",
             description: "Blueberry muffin made with gluten-free flour",
             price: 3.50,
-            image: "/assets/gluten-free-muffin.jpg",
+            image: "/assets/products/gluten-free-muffin.jpg",
             category: "pastries",
             dietary: ["glutenFree"]
           }
